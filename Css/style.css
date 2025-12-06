@@ -355,13 +355,18 @@ nav a:hover::after {
 }
 
 /* ---------------------------- Customer Reviews ---------------------------- */
+/* .customer{
+    height: 90vh;
+} */
+
+
 .left-customer {
     float: left;
     /* display: flex; */
     width: 350px;
     height: 380px;
     position: sticky;
-    top: 2px !important;
+    top: 100px !important;
     border: 1px solid;
     padding: 20px;
     border-radius: 25px;
@@ -388,10 +393,7 @@ nav a:hover::after {
 
 .ratings {
     margin-left: 25px;
-}
-
-.border-bootom {
-    border-bottom: 2px solid rgba(128, 128, 128, 0.185);
+        border-bottom: 2px solid rgba(128, 128, 128, 0.185);
     margin-bottom: 15px;
 }
 
@@ -494,6 +496,11 @@ nav a:hover::after {
     line-height: 20px; 
     margin: 20px 0;
 }
+/* 
+.byn-customer{
+    margin-left: 550px;
+    margin-bottom: 100px !important;
+} */
 
 .left-review-bttn {
     background-color: #7B4DFF;
@@ -501,7 +508,7 @@ nav a:hover::after {
     border-radius: 20px;
     padding: 12px;
     border: none;
-    margin: 10px 0 50px 250px;
+    margin:0 0 10px 750px;
 }
 
 .left-review-bttn:hover {
@@ -515,6 +522,7 @@ footer {
     background-color: rgb(1, 1, 50);
     color: white;
     padding: 70px 0;
+    margin-top: 40px;
 }
 
 /* Footer Left */
