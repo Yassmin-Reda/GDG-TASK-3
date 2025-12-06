@@ -1,0 +1,581 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+/* ---------------------------- Layout ---------------------------- */
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+main {
+    padding-top: 120px;
+}
+
+.clear {
+    clear: both;
+}
+
+/* ---------------------------- Header & Nav ---------------------------- */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.nav {
+    background: #f1ecffd0;
+    height: 90px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.img-logo {
+    padding-top: 15px;
+}
+
+.img-logo img {
+    width: 50px;
+    height: 53px;
+    padding: 0 5px;
+    border-radius: 7px;
+    background-color: #7B4DFF;
+}
+
+.logo-header {
+    display: inline;
+}
+
+.logo-header span {
+    position: relative;
+    top: -50px;
+    left: 60px;
+    font-size: 24px; 
+    font-weight: bold;
+    color: black;
+}
+
+.nav-links {
+    float: right;
+}
+
+.nav-links nav ul li {
+    display: inline-block;
+}
+
+.nav-links nav a {
+    position: relative;
+    color: black;
+    font-weight: 400;
+    padding-bottom: 6.19px;
+    margin: 0 10px !important;
+    top: -45px;
+}
+
+.nav-links nav a:hover {
+    color: #7B4DFF;
+}
+
+nav a.first {
+    color: #7B4DFF;
+    border-bottom: 3px solid #7B4DFF;
+    padding-bottom: 4px;
+}
+
+nav a:not(.first)::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2.5px;
+    width: 0;
+    background: #7B4DFF;
+    transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* ---------------------------- Hero Section ---------------------------- */
+.left-card {
+    float: left;
+    width: 45%;
+}
+
+.hero-card {
+    width: 500px;
+    height: 500px;
+    border: 1.2px solid rgba(128, 128, 128, 0.511);
+    border-radius: 25px;
+    position: relative;
+}
+
+.img-product-card img {
+    width: 100%;
+    padding: 30px;
+    border-radius: 50px;
+}
+
+.span-cardimg {
+    position: absolute;
+    top: 45px;    
+    left: 40px;    
+    background: #7B4DFF;
+    color: #fff;
+    padding: 5px;
+    font-size: 14px;
+    border-radius: 25px;
+    z-index: 5; 
+}
+
+.contant-hero {
+    float: right;
+    width: 50%;
+}
+
+.top-span-hero {
+    background-color: #7B4DFF;
+    color: white;
+    padding: 8px;
+    border-radius: 20px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+.contant-hero h1 {
+    margin: 20px;
+}
+
+.contant-hero p {
+    line-height: 35px;
+    margin: 10px;
+}
+
+.contant-hero .salary {
+    font-weight: bold;
+    font-size: 30px;
+    margin-left: 10px;
+}
+
+.contant-hero del {
+    font-size: 20px;
+    margin: 10px;
+}
+
+.span-hero-bottom {
+    background-color: rgba(233, 150, 122, 0.405);
+    color: rgb(200, 39, 39);
+    font-size: 14px;
+    padding: 6px;
+    border-radius: 20px;
+}
+
+.contant-hero button {
+    text-align: center;
+    border: 0.5px solid rgba(128, 128, 128, 0.877);
+    margin: 15px;
+    border-radius: 30px;
+    width: 100%;
+    padding: 10px 0 15px 0;
+    font-weight: bold;
+}
+
+.img-butt,
+.contant-hero button {
+    display: inline-block;
+}
+
+.img-butt {
+    margin-right: 10px;
+}
+
+.img-butt img {
+    width: 22px;
+    position: relative;
+    top: 7px;
+}
+
+.add-to-Cart {
+    background-color: #7B4DFF;
+    color: white;
+}
+
+.add-to-Wishlist {
+    background-color: white;
+}
+
+.contant-hero button:hover {
+    transform: scale(1.05);
+}
+
+/* ---------------------------- About Section ---------------------------- */
+.about-sec {
+    background-color: #f1ecffd0;
+    padding: 40px 0;
+    margin: 50px 0;
+}
+
+.title-header {
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.title-header h2 {
+    margin: 10px;
+}
+
+.title-header span {
+    color: #7B4DFF;
+}
+
+.cards .card {
+    width: 23%;
+    border: 1px solid rgba(128, 128, 128, 0.877);
+    border-radius: 20px;
+    padding: 25px;
+    background-color: white;
+    position: relative;
+    display: inline-block;
+    margin-left: 15px;
+}
+
+.cards .card img {
+    width: 100%;
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+
+.cards .card span {
+    font-weight: bold;
+    font-size: large;
+}
+
+.cards .card p {
+    line-height: 22px;
+    margin: 10px 0;
+}
+
+.cards .card .add-card {
+    background-color: #7B4DFF;
+    color: white;
+    border: none;
+    border-radius: 45px;
+    padding: 10px;
+    margin-left: 90px;
+}
+
+.cards .card .add-card,
+.cards .card .span {
+    margin-bottom: 10px;
+}
+
+.about-sec button {
+    text-align: center !important;
+    background-color: #f1ecffd0;
+    color: #7B4DFF;
+    border: 1px solid #7B4DFF;
+    padding: 10px;
+    border-radius: 25px;
+    margin: 20px 0 30px 530px;
+}
+
+.about-sec button:hover {
+    background-color: #7B4DFF;
+    color: white;
+}
+
+.about-sec .span-card {
+    position: absolute;
+}
+
+.about-sec .span-card .top-card-img {
+    background-color: #7B4DFF;
+    color: white;
+    border-radius: 20px;
+    padding: 5px;
+    font-size: 14px;
+}
+
+.cards .card .span-card {
+    position: absolute;
+    top: 50px;
+    left: 40px;
+    z-index: 10;
+}
+
+.cards .card .span-card span {
+    color: white;
+    padding: 10px;
+    border-radius: 15px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.cards .card .Accessory span {
+    background-color: cadetblue !important;
+}
+
+.cards .card .Essential span {
+    background-color: rgba(87, 148, 26, 0.855);
+}
+
+.cards .card .Power span {
+    background-color: darkturquoise;
+}
+
+.cards .card .Safety span {
+    background-color: rgba(255, 68, 0, 0.836);
+}
+
+.cards .card .card-img img {
+    transition: 0.4s ease;
+}
+
+.cards .card:hover .card-img img {
+    transform: scale(1.03);
+}
+
+/* ---------------------------- Customer Reviews ---------------------------- */
+.left-customer {
+    float: left;
+    /* display: flex; */
+    width: 350px;
+    height: 380px;
+    position: sticky;
+    top: 2px !important;
+    border: 1px solid;
+    padding: 20px;
+    border-radius: 25px;
+}
+.title-reviewss,
+.right-quality,
+.left-would {
+    text-align: center;
+}
+
+.title-review {
+    font-weight: bold;
+    font-size: 35px;
+}
+
+.star-ryviews-summary img {
+    width: 20px;
+    margin: 10px 0;
+}
+
+.item-1 {
+    margin: 10px 0;
+}
+
+.ratings {
+    margin-left: 25px;
+}
+
+.border-bootom {
+    border-bottom: 2px solid rgba(128, 128, 128, 0.185);
+    margin-bottom: 15px;
+}
+
+.reting {
+    display: inline-block;
+    width: 70%;
+    height: 10px;
+    background-color: #eee;
+    border-radius: 10px;
+}
+
+.reting .ratings-review {
+    height: 10px;
+    background-color: #fac800;
+    border-radius: 20px;
+}
+
+.reting .reting-1 { width: 78%; }
+.reting .reting-2 { width: 15%; }
+.reting .reting-3 { width: 5%; }
+.reting .reting-4 { width: 1.5%; }
+.reting .reting-5 { width: 0.5%; }
+
+.left-would { float: left; }
+.right-quality { float: right; }
+
+.title2-review {
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 15px !important;
+}
+
+.review-cards {
+    float: right;
+    width: 60%;
+}
+
+.card1 {
+    width: 750px;
+    height: 220px;
+    max-width: 100%;
+    border: 2px solid rgba(128, 128, 128, 0.285);
+    border-radius: 25px;
+    padding: 25px;
+    margin-bottom: 20px;
+}
+
+.card1-img {
+    display: inline;
+}
+
+.card1-img img {
+    width: 50px;
+    border-radius: 50%;
+}
+
+.card1-star img {
+    width: 20px;
+}
+
+.card1-left {
+    float: left;
+}
+
+.contant-left-review {
+    margin: -60px 0 0 70px;
+}
+
+.contant-left-span {
+    display: block;
+    padding: 5px 0;
+}
+
+.card1-star {
+    display: inline;
+}
+
+.card1-right {
+    float: right;
+}
+
+.card1-right span {
+    display: block;
+}
+
+.span-Verified {
+    background-color: #e0d5ffd7;
+    color: #7B4DFF;
+    padding: 8px;
+    border-radius: 25px;
+    margin: 0 10px 5px 0;
+}
+
+.span-months {
+    margin-left: 55px;
+}
+
+.card1 p {
+    padding: -10px 25px 25px 25px;
+    line-height: 20px; 
+    margin: 20px 0;
+}
+
+.left-review-bttn {
+    background-color: #7B4DFF;
+    color: white;
+    border-radius: 20px;
+    padding: 12px;
+    border: none;
+    margin: 10px 0 50px 250px;
+}
+
+.left-review-bttn:hover {
+    background-color: white;
+    color: #7B4DFF;
+    border: 2px solid #7B4DFF;
+}
+
+/* ---------------------------- Footer ---------------------------- */
+footer {
+    background-color: rgb(1, 1, 50);
+    color: white;
+    padding: 70px 0;
+}
+
+/* Footer Left */
+.footer-left {
+    float: left;
+    width: 45%;
+}
+
+.img-footer-left {
+    display: inline;
+}
+
+.img-footer-left img {
+    width: 45px;
+    height: 50px;
+    padding: 0 5px;
+    border-radius: 7px;
+    margin-right: 6px;
+    background-color: #7B4DFF;
+}
+
+.footer-logo-left {
+    display: inline-block;
+}
+
+.footer-brand {
+    position: relative;
+    top: -23px;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.footer-left p {
+    margin-top: 15px;
+    color: rgb(200, 200, 200);
+}
+
+/* Footer Right */
+.footer-right {
+    float: right;
+    width: 50%;
+}
+
+.footer-right th {
+    padding-bottom: 15px;
+    text-align: left;
+}
+
+.footer-right td {
+    padding: 10px 96px 10px 0;
+}
+
+.footer-right tr {
+    margin-left: 50px !important;
+}
+
+.footer-right a {
+    color: rgb(180, 180, 180);
+}
+
+.footer-right th a {
+    color: white;
+    font-weight: bold;
+}
