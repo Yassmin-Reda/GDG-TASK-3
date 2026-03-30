@@ -67,9 +67,31 @@ header {
     position: relative;
     top: -50px;
     left: 60px;
-    font-size: 24px; 
+    font-size: 24px;
     font-weight: bold;
     color: black;
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 25px;
+}
+
+#menu-check {
+    display: none;
+}
+
+
+.menu-toggle span {
+    width: 25px;
+    height: 3px;
+    background: black;
+    transition: all 0.3s ease;
 }
 
 .nav-links {
@@ -115,6 +137,10 @@ nav a:hover::after {
 }
 
 /* ---------------------------- Hero Section ---------------------------- */
+.Product {
+    margin-top: 30px;
+}
+
 .left-card {
     float: left;
     width: 45%;
@@ -136,14 +162,14 @@ nav a:hover::after {
 
 .span-cardimg {
     position: absolute;
-    top: 45px;    
-    left: 40px;    
+    top: 45px;
+    left: 40px;
     background: #7B4DFF;
     color: #fff;
     padding: 5px;
     font-size: 14px;
     border-radius: 25px;
-    z-index: 5; 
+    z-index: 5;
 }
 
 .contant-hero {
@@ -371,6 +397,7 @@ nav a:hover::after {
     padding: 20px;
     border-radius: 25px;
 }
+
 .title-reviewss,
 .right-quality,
 .left-would {
@@ -393,7 +420,7 @@ nav a:hover::after {
 
 .ratings {
     margin-left: 25px;
-        border-bottom: 2px solid rgba(128, 128, 128, 0.185);
+    border-bottom: 2px solid rgba(128, 128, 128, 0.185);
     margin-bottom: 15px;
 }
 
@@ -411,14 +438,33 @@ nav a:hover::after {
     border-radius: 20px;
 }
 
-.reting .reting-1 { width: 78%; }
-.reting .reting-2 { width: 15%; }
-.reting .reting-3 { width: 5%; }
-.reting .reting-4 { width: 1.5%; }
-.reting .reting-5 { width: 0.5%; }
+.reting .reting-1 {
+    width: 78%;
+}
 
-.left-would { float: left; }
-.right-quality { float: right; }
+.reting .reting-2 {
+    width: 15%;
+}
+
+.reting .reting-3 {
+    width: 5%;
+}
+
+.reting .reting-4 {
+    width: 1.5%;
+}
+
+.reting .reting-5 {
+    width: 0.5%;
+}
+
+.left-would {
+    float: left;
+}
+
+.right-quality {
+    float: right;
+}
 
 .title2-review {
     font-weight: bold;
@@ -493,9 +539,10 @@ nav a:hover::after {
 
 .card1 p {
     padding: -10px 25px 25px 25px;
-    line-height: 20px; 
+    line-height: 20px;
     margin: 20px 0;
 }
+
 /* 
 .byn-customer{
     margin-left: 550px;
@@ -508,7 +555,7 @@ nav a:hover::after {
     border-radius: 20px;
     padding: 12px;
     border: none;
-    margin:0 0 10px 750px;
+    margin: 0 0 10px 750px;
 }
 
 .left-review-bttn:hover {
@@ -586,4 +633,202 @@ footer {
 .footer-right th a {
     color: white;
     font-weight: bold;
+}
+
+
+/*  Responsive  */
+
+/* Tablet */
+@media (max-width: 1277px) {
+
+    .container {
+        width: 90%;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    #menu-check:checked~.nav-links {
+        display: block;
+    }
+
+    #menu-check:checked+.menu-toggle span:nth-child(1) {
+        transform: rotate(45deg) translate(6px, 6px);
+    }
+
+    #menu-check:checked+.menu-toggle span:nth-child(2) {
+        opacity: 0;
+    }
+
+    #menu-check:checked+.menu-toggle span:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -6px);
+    }
+
+    /* Navbar */
+    .nav-links {
+        float: none;
+        text-align: center;
+        margin-top: -20px;
+    }
+
+    .nav-links nav a {
+        top: 0;
+        display: inline-block;
+        margin: 5px;
+    }
+
+
+    /* Hero */
+    .left-card,
+    .contant-hero {
+        /* float: none; */
+        width: 100%;
+        margin-top: 30px;
+    }
+
+    .hero-card {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Cards */
+    .cards .card {
+        width: 48%;
+        margin: 1%;
+    }
+
+    /* Reviews */
+    .left-customer {
+        float: none;
+        width: 100%;
+        position: static;
+        margin-bottom: 20px;
+    }
+
+    .review-cards {
+        /* float: none; */
+        width: 100%;
+    }
+
+    .card1 {
+        width: 100%;
+        height: auto;
+    }
+
+    .left-review-bttn {
+        margin: 20px auto;
+        display: block;
+    }
+
+    /* Footer */
+    .footer-left,
+    .footer-right {
+        /* float: none; */
+        width: 100%;
+        text-align: center;
+    }
+
+    .footer-right td {
+        padding: 10px;
+    }
+}
+
+
+/* Mobile */
+@media (max-width: 600px) {
+
+    /* Navbar */
+    .nav {
+        height: auto;
+        padding: 10px 0;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    #menu-check:checked~.nav-links {
+        display: block;
+    }
+
+    #menu-check:checked+.menu-toggle span:nth-child(1) {
+        transform: rotate(45deg) translate(6px, 6px);
+    }
+
+    #menu-check:checked+.menu-toggle span:nth-child(2) {
+        opacity: 0;
+    }
+
+    #menu-check:checked+.menu-toggle span:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -6px);
+    }
+
+    .nav-links nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    /* 
+    .Product{
+        margin-top:110px
+    } */
+    /* Hero text */
+    .contant-hero h1 {
+        font-size: 22px;
+    }
+
+    .contant-hero p {
+        font-size: 14px;
+        line-height: 24px;
+    }
+
+    /* Buttons */
+    .contant-hero button {
+        font-size: 14px;
+    }
+
+    /* Cards */
+    .cards .card {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    /* Reviews */
+    .card1 {
+        padding: 15px;
+    }
+
+    .contant-left-review {
+        margin: 0;
+    }
+
+    .card1-left,
+    .card1-right {
+        float: none;
+        text-align: center;
+    }
+
+    .span-months {
+        margin: 0;
+    }
+
+    /* Footer table */
+    .footer-right table {
+        width: 100%;
+    }
+
+    .footer-right td,
+    .footer-right th {
+        display: block;
+        text-align: center;
+    }
 }
